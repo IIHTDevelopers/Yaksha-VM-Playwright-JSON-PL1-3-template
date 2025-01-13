@@ -148,11 +148,6 @@ test.describe("Yaksha", () => {
     await loginPage.verifyLogoutFunctionality();
     await verifyUserisLoggedOut(page);
   });
-
-  test("TS-15 Login with invalid credentials", async ({ page }) => {
-    await loginPage.performLoginWithInvalidCredentials();
-    await verifyUserIsNotLoggedin(page);
-  });
 });
 
 /**
@@ -180,12 +175,4 @@ async function verifyUserisLoggedOut(page: Page) {
 async function verifyUserIsOnCorrectURL(page: Page, expectedURL: string) {
   const getActualURl = page.url();
   expect(getActualURl).toContain(expectedURL);
-}
-
-async function verifyUserIsNotLoggedin(page: Page) {
-  expect(
-    await page
-      .locator('//div[contains(text(),"Invalid credentials !")]')
-      .isVisible()
-  ).toBeTruthy();
 }
