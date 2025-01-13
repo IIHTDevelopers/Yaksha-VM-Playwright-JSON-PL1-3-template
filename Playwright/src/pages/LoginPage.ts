@@ -32,16 +32,6 @@ export class LoginPage {
   }
 
   /**
-   * @Test15 This method attempts login with invalid credentials and retrieves the resulting error message.
-   * @description Tries logging in with incorrect credentials to verify the login error message display.
-   *              Highlights each input field and the login button during interaction. Captures and returns
-   *              the error message displayed upon failed login attempt.
-   */
-  async performLoginWithInvalidCredentials() {
-    // write your logic here
-  }
-
-  /**
    * @Test14
    * @description This method verifies the logout functionality from the Admin dropdown.
    * @expected
